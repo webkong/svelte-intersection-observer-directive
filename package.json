@@ -1,0 +1,71 @@
+{
+  "name": "svelte-intersection-observer-directive",
+  "version": "1.0.0",
+  "description": "A simple svelte intersection observer lib by svlete use actions.",
+  "main": "lib/index.esm.js",
+  "module": "lib/index.esm.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
+    "lint": "eslint --fix ./src"
+  },
+  "author": "webkong",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.24.6",
+    "@babel/preset-env": "^7.24.6",
+    "@commitlint/cli": "^17.8.1",
+    "@commitlint/config-conventional": "^17.8.1",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.26.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.3.0",
+    "prettier": "^2.8.8",
+    "rollup": "^3.29.4",
+    "rollup-plugin-bundle-size": "^1.0.3",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-recess-order": "^3.1.0",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-prettier": "^2.0.0"
+  },
+  "peerDependencies": {
+    "svelte": ">=3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "**/*.{vue,html,js,mjs,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "**/*.{vue,html,css,scss}": [
+      "prettier --write",
+      "stylelint --fix",
+      "git add"
+    ],
+    "**/*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
