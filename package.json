@@ -1,9 +1,9 @@
 {
   "name": "svelte-intersection-observer-directive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple svelte intersection observer lib by svlete use actions.",
-  "main": "lib/index.esm.js",
-  "module": "lib/index.esm.js",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
@@ -12,7 +12,7 @@
     "lint": "eslint --fix ./src"
   },
   "author": "webkong",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/eslint-parser": "^7.24.6",
     "@babel/preset-env": "^7.24.6",
