@@ -1,6 +1,6 @@
 {
   "name": "svelte-intersection-observer-directive",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple svelte intersection observer lib by svlete use actions.",
   "main": "lib/index.js",
   "module": "lib/index.js",

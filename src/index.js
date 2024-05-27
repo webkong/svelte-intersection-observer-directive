@@ -8,7 +8,7 @@ function intersection(node, options) {
         if (once && hasBeenVisible) return;
         node.dispatchEvent(new CustomEvent('enterViewport'));
         console.log('Element has entered the viewport---');
-        if (once && !hasBeenVisible) {
+        if (once) {
           hasBeenVisible = true;
           observer.unobserve(node); // 停止观察
         }
